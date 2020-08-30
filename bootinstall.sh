@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+DISK = 'mount | head -n 1 | cut -d " " -f 1'
+
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
 echo "--------------------------------------"
