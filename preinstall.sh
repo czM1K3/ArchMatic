@@ -77,3 +77,5 @@ umount -R /mnt
 echo "--------------------------------------"
 echo "--   SYSTEM READY FOR FIRST BOOT    --"
 echo "--------------------------------------"
+
+reboot

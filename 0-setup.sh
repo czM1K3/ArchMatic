@@ -56,6 +56,10 @@ localectl --no-ask-password set-keymap us
 # Hostname
 hostnamectl --no-ask-password set-hostname $hostname
 
+# User
+useradd -m -p "$username" "$password"
+echo "$username ALL=(ALL) ALL" >> /etc/sudoers
+
 # Add sudo no password rights
 sed -i 's/^# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
 

@@ -11,7 +11,7 @@ echo -e "\nINSTALLING AUR SOFTWARE\n"
 
 cd "${HOME}"
 
-echo "CLOING: YAY"
+echo "CLONING: YAY"
 git clone "https://aur.archlinux.org/yay.git"
 
 
@@ -20,8 +20,6 @@ PKGS=(
     # UTILITIES -----------------------------------------------------------
 
     'i3lock-fancy'              # Screen locker
-    'synology-drive'            # Synology Drive
-    'freeoffice'                # Office Alternative
     
     # MEDIA ---------------------------------------------------------------
 
@@ -30,7 +28,7 @@ PKGS=(
 
     # COMMUNICATIONS ------------------------------------------------------
 
-    'brave-nightly-bin'         # Brave
+    'google-chrome-dev'         # Brave
     
 
     # THEMES --------------------------------------------------------------

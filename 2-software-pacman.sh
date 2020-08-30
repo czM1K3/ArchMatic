@@ -32,14 +32,12 @@ PKGS=(
     'openssh'               # SSH connectivity tools
     'p7zip'                 # 7z compression program
     'rsync'                 # Remote file sync utility
-    'speedtest-cli'         # Internet speed via terminal
     'terminus-font'         # Font package with some bigger fonts for login terminal
     'tlp'                   # Advanced laptop power management
     'unrar'                 # RAR compression program
     'unzip'                 # Zip compression program
     'wget'                  # Remote content retrieval
     'terminator'            # Terminal emulator
-    'vim'                   # Terminal Editor
     'zenity'                # Display graphical dialog boxes via shell scripts
     'zip'                   # Zip compression program
     'zsh'                   # ZSH shell
@@ -47,7 +45,6 @@ PKGS=(
 
     # DISK UTILITIES ------------------------------------------------------
 
-    'android-tools'         # ADB for Android
     'android-file-transfer' # Android File Transfer
     'autofs'                # Auto-mounter
     'btrfs-progs'           # BTRFS Support
@@ -67,20 +64,13 @@ PKGS=(
     # GENERAL UTILITIES ---------------------------------------------------
 
     'flameshot'             # Screenshots
-    'freerdp'               # RDP Connections
-    'libvncserver'          # VNC Connections
     'nautilus'              # Filesystem browser
-    'remmina'               # Remote Connection
-    'veracrypt'             # Disc encryption utility
-    'variety'               # Wallpaper changer
 
     # DEVELOPMENT ---------------------------------------------------------
 
-    'gedit'                 # Text editor
     'clang'                 # C Lang compiler
     'cmake'                 # Cross-platform open-source make system
     'code'                  # Visual Studio Code
-    'electron'              # Cross-platform development using Javascript
     'git'                   # Version control system
     'gcc'                   # C/C++ compiler
     'glibc'                 # C libraries
@@ -89,24 +79,6 @@ PKGS=(
     'npm'                   # Node package manager
     'python'                # Scripting language
     'yarn'                  # Dependency management (Hyper needs this)
-
-    # MEDIA ---------------------------------------------------------------
-
-    'kdenlive'              # Movie Render
-    'obs-studio'            # Record your screen
-    'celluloid'             # Video player
-    
-    # GRAPHICS AND DESIGN -------------------------------------------------
-
-    'gcolor2'               # Colorpicker
-    'gimp'                  # GNU Image Manipulation Program
-    'ristretto'             # Multi image viewer
-
-    # PRODUCTIVITY --------------------------------------------------------
-
-    'hunspell'              # Spellcheck libraries
-    'hunspell-en'           # English spellcheck library
-    'xpdf'                  # PDF viewer
 
 )
 
