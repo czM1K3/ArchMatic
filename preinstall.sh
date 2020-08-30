@@ -11,10 +11,11 @@ echo "-------------------------------------------------"
 echo "Setting up mirrors for optimal download - CZ Only"
 echo "-------------------------------------------------"
 timedatectl set-ntp true
+pacman -Sy
 pacman -S --noconfirm pacman-contrib
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-curl "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" > /etc/pacman.d/mirrorlist
-
+curl -s "https://www.archlinux.org/mirrorlist/?country=CZ&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist
+pacman -Sy
 
 
 echo -e "\nInstalling prereqs...\n$HR"
