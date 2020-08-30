@@ -58,7 +58,7 @@ hostnamectl --no-ask-password set-hostname $hostname
 
 # User
 useradd -m "$username"
-echo "$username:$password"
+echo "$username:$password" | chpasswd
 echo "$username ALL=(ALL) ALL" >> /etc/sudoers
 
 # Add sudo no password rights
