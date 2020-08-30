@@ -8,12 +8,12 @@
 #-------------------------------------------------------------------------
 
 echo "-------------------------------------------------"
-echo "Setting up mirrors for optimal download - US Only"
+echo "Setting up mirrors for optimal download - CZ Only"
 echo "-------------------------------------------------"
 timedatectl set-ntp true
 pacman -S --noconfirm pacman-contrib
 mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist
+curl "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" > /etc/pacman.d/mirrorlist
 
 
 
@@ -53,11 +53,10 @@ mkfs.vfat -F32 -n "UEFISYS" "${DISK}1"
 mkfs.ext4 -L "ROOT" "${DISK}2"
 
 # mount target
-mkdir /mnt
 mount -t ext4 "${DISK}2" /mnt
 mkdir /mnt/boot
-mkdir /mnt/boot/efi
 mount -t vfat "${DISK}1" /mnt/boot/
+mkdir /mnt/boot/efi
 
 echo "--------------------------------------"
 echo "-- Arch Install on Main Drive       --"
@@ -69,7 +68,7 @@ arch-chroot /mnt
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
 echo "--------------------------------------"
-bootctl install
+bootctl --path=/boot install
 cat <<EOF > /boot/loader/entries/arch.conf
 title Arch Linux  
 linux /vmlinuz-linux  
