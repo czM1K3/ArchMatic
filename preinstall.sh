@@ -69,7 +69,7 @@ arch-chroot /mnt
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
 echo "--------------------------------------"
-bootctl --path=/boot install
+bootctl install
 printf 'title Arch Linux  
 linux /vmlinuz-linux  
 initrd  /initramfs-linux.img  
