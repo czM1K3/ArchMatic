@@ -23,6 +23,6 @@ echo "--------------------------------------"
 echo "--      Set Password for Root       --"
 echo "--------------------------------------"
 echo "Enter password for root user: "
-passwd root
+echo "root:toor" | passwd
 
 exit
