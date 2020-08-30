@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-DISK = 'mount | head -n 1 | cut -d " " -f 1'
+DISK = $(awk '$2 == "/"' /proc/self/mounts | cut -d " " -f 1)
 
 echo "--------------------------------------"
 echo "-- Bootloader Systemd Installation  --"
