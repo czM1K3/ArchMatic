@@ -44,11 +44,11 @@ function setup {
     fi
 
     echo "-------------------------------------------------"
-    echo "Setting up mirrors for optimal download - US Only"
+    echo "Setting up mirrors for optimal download - CZ Only"
     echo "-------------------------------------------------"
     pacman -S --noconfirm pacman-contrib curl
     mv /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
-    curl -s "https://www.archlinux.org/mirrorlist/?country=US&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist
+    curl -s "https://www.archlinux.org/mirrorlist/?country=CZ&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist
 
     echo "-------------------------------------------------"
     echo "              makepkg configuration              "
