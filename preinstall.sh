@@ -68,7 +68,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 wget https://raw.githubusercontent.com/czM1K3/ArchMatic/master/bootinstall.sh -P /mnt
 
 echo "sh bootinstall.sh"
-echo sh bootinstall.sh | arch-chroot /mnt
+arch-chroot /mnt
 
 rm /mnt/bootinstall.sh
 
